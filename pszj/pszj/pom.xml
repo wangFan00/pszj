@@ -1,0 +1,86 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.qipeng.pszj</groupId>
+  <artifactId>pszj</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  
+  <!-- Spring Boot 启动父依赖 --> 
+  <parent> 
+  	<groupId>org.springframework.boot</groupId> 
+  	<artifactId>spring-boot-starter-parent</artifactId> 
+  	<version>1.4.2.RELEASE</version> 
+  </parent>
+  
+  <dependencies>
+  	<!-- Spring Boot Web 依赖 --> 
+  	<dependency> 
+  		<groupId>org.springframework.boot</groupId> 
+  		<artifactId>spring-boot-starter-web</artifactId> 
+  	</dependency>
+  	
+  	<!-- lombok --> 
+  	<dependency>    
+	    <groupId>org.projectlombok</groupId>    
+	    <artifactId>lombok</artifactId>
+	</dependency>
+  	<!--mysql支持  MySQL的JDBC驱动包，用JDBC连接MySQL数据库时必须使用该jar包  -->
+       <dependency>
+           <groupId>mysql</groupId>
+           <artifactId>mysql-connector-java</artifactId>
+       </dependency>
+        
+       <!--事务管理：原子性，一致性，隔离性，持久性  -->
+      <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-jdbc</artifactId>
+      </dependency>
+      
+      <!--jpa 集成hibernate -->
+      <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+
+       </dependency>
+       <!--支持json -->
+        <dependency>
+			<groupId>net.sf.json-lib</groupId>
+			<artifactId>json-lib</artifactId>
+			<version>2.4</version>
+		<classifier>jdk15</classifier>
+		</dependency>
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+			<version>1.7.0</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-collections</groupId>
+			<artifactId>commons-collections</artifactId>
+			<version>3.1</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-lang</groupId>
+			<artifactId>commons-lang</artifactId>
+			<version>2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>net.sf.ezmorph</groupId>
+			<artifactId>ezmorph</artifactId>
+			<version>1.0.3</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpcore -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpcore</artifactId>
+            <version>4.4.10</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>4.5.6</version>
+        </dependency>
+  </dependencies>
+</project>
